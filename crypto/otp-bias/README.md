@@ -7,18 +7,24 @@ packages. If you have the `pip` installer for Python, you can install
 these as follows. 
 
 ```
-pip install opencv-python
-pip install numpy
+pip install [--user] opencv-python
+pip install [--user] numpy
 ```
 
 Depending on your system, you may need to
 install these using the `--user` argument to install the packages for
-your local user, or set up a python virtual environment.  
+your local user, or set up a python virtual environment (recommended).  
 
 ## Overview
 
 
-In the "Key Reuse" demo, we focused on one way that information can be leaked via incorrect usage of one-time-pads; in particular, key reuse. In this demo, we'll focus on something a little different, but still related to the idea that, even though we have this cryptographic primitive that will provably give us "perfect secrecy", subtle things that we do in setting up this primitive can cause us to still inadvertently leak information.
+In the "Key Reuse" demo, we focused on one way that information can be
+leaked via incorrect usage of one-time-pads; in particular, key
+reuse. In this demo, we'll focus on something a little different, but
+still related to the idea that, even though we have this cryptographic
+primitive that will provably give us "perfect secrecy", subtle things
+that we do in setting up this primitive can cause us to still
+inadvertently leak information.
 
 The particular thing that we'll demonstrate here is the pitfalls of using imperfect, or _biased_ random number generators for creating one time pads. The demonstration program was [stream.py]({{ 'files/demos/one-time-pad/stream.py' | relative_url }}).
 
